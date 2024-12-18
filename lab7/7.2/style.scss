@@ -1,0 +1,897 @@
+// === FONTS ===
+
+@import url("https://fonts.googleapis.com/css2?family=PT+Sans&family=Playfair+Display&display=swap");
+
+@font-face {
+  src: url("../SiteLayout/Fonts/postnobillscolombo-regular.ttf");
+  font-family: PostNoBills;
+}
+
+// === SCSS CODE ===
+
+* {
+  margin: 0px;
+  padding: 0px;
+}
+
+.section-outer {
+  padding-left: 20px;
+  padding-right: 20px;
+}
+
+.section-inner-1 {
+  max-width: 1100px;
+  margin: 0 auto;
+}
+
+.section-inner-2 {
+  max-width: 100%;
+}
+
+// === SECTION-HEADER ===
+
+.section-header {
+  background-color: #000000;
+  color: gray;
+  &-nav {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 44px;
+    &-contacts {
+      display: flex;
+      align-items: center;
+      &-icon {
+        margin-right: 31px;
+        img {
+          width: 20px;
+        }
+      }
+      &-text {
+        p {
+          font-family: PT Sans;
+          font-size: 12px;
+          a {
+            text-decoration: none;
+            color: white;
+          }
+        }
+      }
+    }
+    &-login {
+      a {
+        display: flex;
+        align-items: center;
+        text-decoration: none;
+      }
+      &-icon {
+        margin-right: 31px;
+        img {
+          width: 20px;
+        }
+      }
+      &-text {
+        p {
+          font-family: PT Sans;
+          font-size: 12px;
+          color: gray;
+        }
+      }
+    }
+  }
+}
+
+@media(max-width: 426px) {
+  .section-header {
+    display: none;
+  }
+}
+// === /SECTION-HEADER ===
+
+// === SECTION-SUBHEADER ===
+
+.section-subheader {
+  background-color: #0f0f0f;
+  &-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    align-items: center;
+    height: 80px;
+    &-logo {
+      h1 {
+        color: white;
+        font-family: PostNoBills;
+        font-size: 36px;
+        font-style: normal;
+      }
+    }
+    &-tabs {
+      display: flex;
+      flex-direction: row;
+      align-items: center;
+      &-nav {
+        ul {
+          display: flex;
+          flex-direction: row;
+          list-style: none;
+          li {
+            button {
+              background: transparent;
+              height: 80px;
+              width: 136px;
+              outline: none;
+              border: none;
+              span {
+                color: gray;
+                font-size: 14px;
+                text-transform: uppercase;
+                font-family: PT Sans;
+              }
+            }
+            button:hover {
+              background-color: gray;
+              transition: all 0.5s;
+              span {
+                color: white;
+              }
+            }
+          }
+        }
+      }
+      &-instruments {
+        margin-left: 50px;
+        display: flex;
+        flex-direction: row;
+        &-instrument_1 {
+          a {
+            img {
+              width: 30px;
+            }
+          }
+        }
+        &-instrument_2 {
+          margin-left: 44px;
+          a {
+            img {
+              width: 30px;
+            }
+          }
+        }
+      }
+      &-button_nav {
+        display: none;
+        &-darkBg {
+          position: absolute;
+          top: 0;
+          left: 0;
+          width: 100%;
+          height: 200%;
+          background-color: black;
+          opacity: 0.6;
+          z-index: 3;
+        }
+        &-content {
+          position: absolute;
+          right: 0;
+          top: 0;
+          background-color: #191b1c;
+          width: 40%;
+          height: 200%;
+          z-index: 4;
+          ul {
+            list-style: none;
+            li {
+              border-bottom: 1px solid white;
+              height: 50px;
+              a {
+                display: flex;
+                justify-content: flex-end;
+                align-items: center;
+                text-decoration: none;
+                width: 100%;
+                height: 100%;
+                p {
+                  color: white;
+                  text-transform: uppercase;
+                  font-size: 16px;
+                  font-family: PT Sans;
+                }
+              }
+            }
+            li:nth-child(1) {
+              margin-top: 50px;
+            }
+          }
+        }
+        @media(max-width: 321px) {
+          .section-subheader-container-tabs-button_nav-content {
+            width: 50%;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 700px) {
+  .section-subheader-container-tabs {
+    &-nav {
+      display: none;
+    }
+    &-instruments {
+      display: none;
+    }
+    &-button_nav {
+      display: block;
+      button {
+        width: 60px;
+        background-color: transparent;
+        outline: none;
+        border: none;
+        img {
+          width: 60px;
+        }
+      }
+    }
+  }
+}
+
+// === /SECTION-SUBHEADER ====
+
+// === SECTION-SCREEN ===
+
+.section-screen {
+  background: url("../SiteLayout/Images/Screen-image.png");
+  padding-top: 160px;
+  background-repeat: no-repeat 50% 50%;
+  background-size: cover;
+  &-logo {
+    width: 320px;
+    height: 320px;
+    border: 4px solid white;
+    margin: 0 auto;
+    margin-bottom: 80px;
+    &-text {
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      flex-direction: column;
+      height: 320px;
+      h1 {
+        font-family: PostNoBills;
+        font-size: 64px;
+        color: white;
+      }
+      h2 {
+        font-size: 22px;
+        font-family: PT Sans;
+        text-transform: uppercase;
+        color: white;
+      }
+    }
+  }
+  &-text {
+    max-width: 730px;
+    margin: 0 auto;
+    padding-bottom: 100px;
+    p {
+      color: white;
+      text-transform: uppercase;
+      font-size: 16px;
+      font-family: PT Sans;
+      text-align: center;
+    }
+  }
+  @media(max-width: 768px) {
+    .section-screen-logo {
+      margin-bottom: 50px;
+    }
+  }
+  @media(max-width: 321px) {
+    .section-screen-logo {
+      width: 250px;
+      height: 250px;
+      &-text {
+        height: 250px;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .section-screen {
+    height: 90vh;
+    padding-top: 80px;
+    &-text {
+      width: 100%;
+    }
+  }
+}
+// === /SECTION-SCREEN ===
+
+// === SECTION-SEASON ===
+
+.section-season {
+  background-color: black;
+  &-container {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    &-season20 {
+      display: flex;
+      align-items: center;
+      flex-direction: column;
+      margin: 0 auto;
+      h3 {
+        color: white;
+        font-family: Playfair Display;
+        font-size: 36px;
+        margin-bottom: 50px;
+      }
+      &-products {
+        display: flex;
+        flex-direction: row;
+        margin-top: 50px;
+        &-1 {
+          margin-right: 50px;
+          &-image {
+            background-color: #191b1c;
+            width: 260px;
+            height: 325px;
+            img {
+              margin: 55px 23px;
+            }
+          }
+          h4 {
+            color: white;
+            margin-top: 25px;
+            font-family: Playfair Display;
+            font-size: 18px;
+          }
+          p {
+            color: white;
+            margin-top: 10px;
+            font-family: Playfair Display;
+            font-size: 16px;
+          }
+        }
+        &-2 {
+          margin-right: 50px;
+          &-image {
+            background-color: #191b1c;
+            width: 260px;
+            height: 325px;
+            img {
+              margin: 55px 23px;
+            }
+          }
+          h4 {
+            color: white;
+            margin-top: 25px;
+            font-family: Playfair Display;
+            font-size: 18px;
+          }
+          p {
+            color: white;
+            margin-top: 10px;
+            font-family: Playfair Display;
+            font-size: 16px;
+          }
+        }
+        &-3 {
+          &-image {
+            background-color: #191b1c;
+            width: 260px;
+            height: 325px;
+            img {
+              margin: 55px 23px;
+            }
+          }
+          h4 {
+            color: white;
+            margin-top: 25px;
+            font-family: Playfair Display;
+            font-size: 18px;
+          }
+          p {
+            color: white;
+            margin-top: 10px;
+            font-family: Playfair Display;
+            font-size: 16px;
+          }
+        }
+      }
+    }
+    &-new_collection {
+      display: flex;
+      justify-content: center;
+      align-items: flex-end;
+      &-image {
+        position: relative;
+      }
+      &-content {
+        position: absolute;
+        display: flex;
+        align-items: center;
+        flex-direction: column;
+        margin-bottom: 25px;
+        h3 {
+          color: white;
+          font-size: 36px;
+          text-transform: uppercase;
+          font-family: Playfair Display;
+          margin-bottom: 30px;
+        }
+        @media(max-width: 321px) {
+          h3 {
+            font-size: 25px;
+          }
+        }
+        button {
+          background: transparent;
+          outline: none;
+          border: 2px solid white;
+          border-radius: 2px;
+          width: 140px;
+          height: 50px;
+          margin-top: 30px;
+          transition: all 0.2s;
+          span {
+            font-family: PT Sans;
+            text-transform: uppercase;
+            font-size: 18px;
+            color: white;
+          }
+        }
+        button:hover {
+          transition: all 0.2s;
+          background-color: white;
+          span {
+            color: black;
+          }
+        }
+        button:active {
+          transition: all 0.2s;
+          background-color: transparent;
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1796px) {
+  .section-season-container {
+    flex-direction: column;
+    padding-top: 100px;
+    &-season20 {
+      &-products {
+        &-1 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        &-2 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+        &-3 {
+          display: flex;
+          flex-direction: column;
+          align-items: center;
+        }
+      }
+    }
+    &-new_collection {
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section-season-container {
+    &-season20 {
+      &-products {
+        flex-direction: column;
+        &-1 {
+          margin-right: 0px;
+        }
+        &-2 {
+          margin-top: 25px;
+          margin-right: 0px;
+        }
+        &-3 {
+          margin-top: 25px;
+        }
+      }
+    }
+    &-new_collection {
+      &-image {
+        max-width: 90%;
+        img {
+          width: 100%;
+        }
+      }
+    }
+  }
+}
+
+// === /SECTION-SEASON ===
+
+// === SECTION-COLLECTION_2018
+
+.section-collection_2018 {
+  &-container {
+    display: flex;
+    flex-direction: row;
+    background-color: black;
+    &-content {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      h3 {
+        font-family: Playfair Display;
+        text-transform: uppercase;
+        font-size: 36px;
+        margin-bottom: 40px;
+        color: white;
+      }
+      @media(max-width: 321px) {
+        h3 {
+          font-size: 25px;
+        }
+      }
+      p {
+        font-size: 14px;
+        font-family: PT Sans;
+        text-align: center;
+        width: 50%;
+        margin-top: 40px;
+        margin-bottom: 50px;
+        color: white;
+      }
+      button {
+        background: transparent;
+        border: 2px solid white;
+        width: 320px;
+        height: 50px;
+        outline: none;
+        border-radius: 2px;
+        span {
+          color: white;
+          font-size: 18px;
+          font-family: PT Sans;
+          text-transform: uppercase;
+        }
+      }
+      @media(max-width: 321px) {
+        button {
+          width: 300px;
+        }
+      }
+      button:hover {
+        transition: all 0.2s;
+        background-color: white;
+        span {
+          color: black;
+        }
+      }
+      button:active {
+        transition: all 0.2s;
+        background-color: transparent;
+        span {
+          color: white;
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1796px) {
+  .section-collection_2018-container {
+    flex-direction: column;
+    padding-top: 100px;
+    img {
+      margin: 0 auto;
+      margin-top: 50px;
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section-collection_2018-container {
+    img {
+      width: 90%;
+    }
+  }
+}
+
+// === /SECTION-COLLECTION_2018 ===
+
+// === SECTION-RECEIPTS ===
+
+.section-new_receipts {
+  background-color: black;
+  &-container {
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    max-width: 1100px;
+    padding-top: 120px;
+    padding-bottom: 150px;
+    &-image {
+      background-color: #191b1c;
+      width: 260px;
+      height: 325px;
+      img {
+        margin: 55px 23px;
+      }
+    }
+    h1 {
+      color: white;
+      font-size: 36px;
+      font-family: Playfair Display;
+      text-transform: uppercase;
+      margin-bottom: 40px;
+    }
+    ul {
+      margin: 0 auto;
+      display: grid;
+      grid-template-rows: 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr 1fr;
+      list-style: none;
+      width: 100%;
+      margin-top: 40px;
+      li {
+        margin: 40px auto;
+        h4 {
+          color: white;
+          margin-top: 25px;
+          font-family: Playfair Display;
+          font-size: 18px;
+        }
+        p {
+          color: white;
+          margin-top: 10px;
+          font-family: Playfair Display;
+          font-size: 16px;
+        }
+      }
+    }
+    @media(max-width: 426px) {
+      h1 {
+        text-align: center;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 1116px) {
+  .section-new_receipts-container {
+    ul {
+      grid-template-rows: 1fr 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr;
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .section-new_receipts-container {
+    ul {
+      grid-template-columns: 1fr;
+    }
+  }
+}
+
+
+// === SECTION-RECEIPTS ===
+
+// === SECTION-OUR_BRANDS ===
+
+.section-our_brands {
+  background-color: #0f0f0f;
+  &-container {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding-top: 60px;
+    h1 {
+      margin-bottom: 40px;
+      font-size: 36px;
+      font-family: Playfair Display;
+      color: white;
+      text-transform: uppercase;
+    }
+    ul {
+      display: flex;
+      margin-top: 40px;
+      margin-bottom: 80px;
+      list-style: none;
+      justify-content: space-between;
+      width: 100%;
+    }
+  }
+}
+
+@media screen and (max-width: 1130px) {
+  .section-our_brands-container {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr 1fr;
+      li {
+        margin: 0 auto;
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 426px) {
+  .section-our_brands-container {
+    ul {
+      display: grid;
+      grid-template-columns: 1fr;
+    }
+  }
+}
+// === /SECTION-OUR_BRANDS ===
+
+// === SECTION-FOOTER ===
+
+.section-footer {
+  background-image: url("/SiteLayout/Images/footer.png");
+  background-repeat: no-repeat 50% 50%;
+  background-size: cover;
+  &-container {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    padding-top: 80px;
+    padding-bottom: 100px;
+    &-about_shop {
+      max-width: 350px;
+      h1 {
+        font-family: Playfair Display;
+        font-size: 24px;
+        color: white;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 14px;
+        font-family: PT Sans;
+        color: white;
+        margin-top: 40px;
+      }
+    }
+    &-categories {
+      max-width: 290px;
+      h1 {
+        font-family: Playfair Display;
+        font-size: 24px;
+        color: white;
+        text-transform: uppercase;
+      }
+      &-buttons {
+        margin-top: 40px;
+        button {
+          background-color: black;
+          height: 40px;
+          outline: none;
+          border: none;
+          margin-bottom: 20px;
+          transition: all 0.2s;
+          span {
+            font-size: 14px;
+            font-family: PT Sans;
+            color: white;
+            margin-left: 20px;
+            margin-right: 20px;
+          }
+        }
+        button:hover {
+          transition: all 0.2s;
+          background-color: white;
+          span {
+            color: black;
+          }
+        }
+        button:active {
+          transition: all 0.2s;
+          background-color: black;
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+    &-mailing {
+      max-width: 355px;
+      h1 {
+        font-family: Playfair Display;
+        font-size: 24px;
+        color: white;
+        text-transform: uppercase;
+      }
+      p {
+        font-size: 14px;
+        font-family: PT Sans;
+        color: white;
+        margin-top: 40px;
+      }
+      &-form {
+        margin-top: 37px;
+        display: flex;
+        flex-direction: row;
+        &-input {
+          padding-left: 10px;
+          color: white;
+          font-size: 14px;
+          font-family: PT Sans;
+        }
+        input {
+          width: 210px;
+          height: 42px;
+          background: rgba(255, 255, 255, 0.4);
+          border: none;
+          outline: none;
+        }
+        input::placeholder {
+          color: white;
+          font-size: 14px;
+          font-family: PT Sans;
+        }
+        button {
+          background-color: black;
+          outline: none;
+          border: none;
+          height: 42px;
+          transition: all 0.2s;
+          span {
+            text-transform: uppercase;
+            color: white;
+            font-family: PT Sans;
+            font-size: 14px;
+            margin: 0 20px;
+          }
+        }
+        button:hover {
+          transition: all 0.2s;
+          background-color: white;
+          span {
+            color: black;
+          }
+        }
+        button:active {
+          transition: all 0.2s;
+          background-color: black;
+          span {
+            color: white;
+          }
+        }
+      }
+    }
+  }
+}
+
+@media screen and (max-width: 900px) {
+  .section-footer {
+    &-container {
+      flex-direction: column;
+      &-categories {
+        margin-top: 20px;
+      }
+      &-mailing {
+        p {
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+// === /SECTION-FOOTER ===
