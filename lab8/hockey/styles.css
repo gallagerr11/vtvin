@@ -1,0 +1,129 @@
+body {
+    font-family: Arial, sans-serif;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    background: url('oboi.jpg') no-repeat center center/cover;
+    color: #333333;
+    cursor: url('fa-hockey-puck.ico'), auto;
+}
+
+
+header {
+    background-color: #003366;
+    color: #ffffff;
+    padding: 20px;
+    text-align: center;
+}
+
+header .logo {
+    font-size: 24px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+header .logo i {
+    margin-right: 10px;
+}
+
+nav ul {
+    list-style: none;
+    padding: 0;
+}
+
+nav ul li {
+    display: inline;
+    margin: 0 10px;
+}
+
+nav ul li a {
+    color: #ffffff;
+    text-decoration: none;
+    font-size: 18px;
+}
+
+nav ul li a:hover {
+    text-decoration: underline;
+}
+
+
+main .hero {
+    background: url('hero-image.jpg') no-repeat center center/cover;
+    text-align: center;
+    padding: 100px 20px;
+}
+
+main .hero h1,
+main .hero p {
+    color: #3206b8; 
+}
+
+main .hero h1 {
+    font-size: 36px;
+    margin-bottom: 10px;
+}
+
+main .hero p {
+    font-size: 20px;
+}
+
+main .hero #more-info {
+    font-size: 20px;
+    color: #003366; 
+    margin-top: 20px;
+}
+
+
+.contact-us,
+.about-us {
+    padding: 50px 20px;
+}
+
+.contact-us h1,
+.about-us h1 {
+    font-size: 32px;
+    color: #003366;
+}
+
+.contact-us p,
+.about-us p,
+.contact-us ul,
+.about-us ul,
+.contact-us form label {
+    font-size: 18px;
+}
+
+.contact-us form {
+    display: flex;
+    flex-direction: column;
+}
+
+.contact-us form label {
+    margin-bottom: 5px;
+}
+
+.contact-us form input,
+.contact-us form textarea {
+    margin-bottom: 20px;
+    padding: 10px;
+    font-size: 16px;
+    border: 1px solid #cccccc;
+    border-radius: 5px;
+}
+
+.contact-us form button {
+    padding: 10px 20px;
+    font-size: 16px;
+    color: #ffffff;
+    background-color: #003366;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.contact-us form button:hover {
+    background-color: #002244;
+}
+
+
